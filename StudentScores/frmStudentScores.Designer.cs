@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstStudents = new System.Windows.Forms.ListBox();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,14 +52,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Students";
             // 
-            // listBox1
+            // lstStudents
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(16, 31);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(235, 94);
-            this.listBox1.TabIndex = 1;
+            this.lstStudents.FormattingEnabled = true;
+            this.lstStudents.ItemHeight = 15;
+            this.lstStudents.Location = new System.Drawing.Point(16, 31);
+            this.lstStudents.Name = "lstStudents";
+            this.lstStudents.Size = new System.Drawing.Size(235, 94);
+            this.lstStudents.TabIndex = 1;
             // 
             // btnAddNew
             // 
@@ -93,6 +93,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(265, 177);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
@@ -180,13 +181,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAddNew);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstStudents);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmStudentScores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Scores";
+            this.Load += new System.EventHandler(this.frmStudentScores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +197,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstStudents;
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button1;
